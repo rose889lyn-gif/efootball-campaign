@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eFootball™ Official Campaign Event (Demo)</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Roboto',sans-serif;
+  background:#050816;
+  color:white;
+}.topbar{ background:#0b122a; padding:10px; text-align:center; font-size:12px; opacity:0.9; border-bottom:1px solid rgba(255,255,255,0.08); }
+
+nav{ display:flex; justify-content:space-between; align-items:center; padding:15px 25px; background:#070b1f; position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(255,255,255,0.08); }
+
+.logo{ font-family:'Orbitron',sans-serif; color:#00c6ff; font-size:18px; letter-spacing:1px; }
+
+nav ul{ display:flex; gap:15px; list-style:none; font-size:13px; opacity:0.85; }
+
+.hero{ padding:50px 20px; text-align:center; background:radial-gradient(circle at top,#0b1a4a,#050816); }
+
+.hero h1{ font-family:'Orbitron',sans-serif; font-size:2.2em; margin-bottom:10px; }
+
+.hero p{opacity:0.8}
+
+.badge{ display:inline-block; margin-top:10px; padding:6px 10px; background:#00c6ff; color:black; font-size:11px; border-radius:20px; font-weight:bold; }
+
+.container{ max-width:1100px; margin:auto; padding:30px 15px; }
+
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+
+.card{ background:#0c1433; border:1px solid rgba(0,198,255,0.15); border-radius:12px; padding:15px; transition:0.3s; }
+
+.card:hover{ transform:translateY(-5px); box-shadow:0 0 18px rgba(0,198,255,0.25); }
+
+.card img{ width:100%; border-radius:10px; margin-bottom:10px; }
+
+input,button{ width:100%; padding:12px; margin-top:10px; border-radius:8px; border:none; }
+
+button{ background:#00c6ff; font-weight:bold; cursor:pointer; }
+
+button:hover{opacity:0.85}
+
+.small{font-size:12px;opacity:0.7;margin-top:8px}
+
+footer{ text-align:center; padding:30px 15px; margin-top:40px; border-top:1px solid rgba(255,255,255,0.08); font-size:12px; opacity:0.7; }
+
+</style>
+</head>
+<body><div class="topbar">
+⚠️ Fan-made demo event page. Not affiliated with KONAMI or eFootball™ official services.
+</div><nav>
+  <div class="logo">eFootball™ Event Hub</div>
+  <ul>
+    <li>Home</li>
+    <li>Campaign</li>
+    <li>Legends</li>
+    <li>Support</li>
+  </ul>
+</nav><section class="hero">
+  <h1>1 BILLION DOWNLOAD CAMPAIGN</h1>
+  <p>Global celebration event for all players</p>
+  <div class="badge">LIVE EVENT</div>
+</section><div class="container">  <h2 style="margin-bottom:15px;font-family:Orbitron;">Enter Event Portal</h2>  <div class="card">
+    <p class="small">Enter your username to continue (demo access)</p>
+    <input type="text" id="username" placeholder="Username">
+    <button onclick="startEvent()">Enter Event</button>
+  </div>  <h2 style="margin:30px 0 15px;font-family:Orbitron;">Featured Legends</h2>  <div class="grid"><div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ruud_Gullit_1988.jpg">
+  <b>Ruud Gullit</b>
+  <p class="small">Legendary Midfielder</p>
+</div>
+
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Steven_Gerrard_2014.jpg">
+  <b>Steven Gerrard</b>
+  <p class="small">Iconic Captain</p>
+</div>
+
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Ronaldinho_2019.jpg">
+  <b>Ronaldinho</b>
+  <p class="small">Football Magician</p>
+</div>
+
+  </div></div><footer>
+  © 2026 eFootball™ Fan Event Demo | This page is for testing and educational UI design only.
+</footer><script>
+function startEvent(){
+  let u=document.getElementById('username').value||"Player";
+  alert("Welcome " + u + "! Event portal loaded (demo mode)");
+}
+</script></body>
+</html>
