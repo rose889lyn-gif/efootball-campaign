@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eFootball™ Campaign Event Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Roboto',sans-serif;
+  background:url('https://picsum.photos/1920/1080?blur=2') center/cover fixed;
+  color:#fff;
+}
+.overlay{
+  min-height:100vh;
+  background:rgba(5,8,20,0.92);
+}header{ text-align:center; padding:28px 15px; }
+
+header h1{ font-family:'Orbitron',sans-serif; font-size:2em; color:#00c6ff; }
+
+header p{opacity:0.8;margin-top:6px}
+
+.badge{ display:inline-block; margin-top:10px; padding:6px 12px; border-radius:20px; background:linear-gradient(90deg,#00c6ff,#0072ff); font-weight:bold; font-size:12px; }
+
+.container{ max-width:900px; margin:auto; padding:20px; }
+
+.card{ background:rgba(10,15,35,0.85); border:1px solid rgba(0,198,255,0.25); border-radius:14px; padding:18px; margin-bottom:15px; backdrop-filter:blur(10px); }
+
+input{ width:100%; padding:12px; margin-top:10px; border:none; border-radius:8px; }
+
+button{ width:100%; padding:12px; margin-top:10px; border:none; border-radius:8px; background:linear-gradient(90deg,#00c6ff,#0072ff); color:#fff; font-weight:bold; cursor:pointer; }
+
+button:hover{opacity:0.85}
+
+.hidden{display:none}
+
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+
+.player{ text-align:center; }
+
+.player img{ width:100%; border-radius:12px; border:1px solid rgba(0,198,255,0.35); }
+
+footer{ text-align:center; padding:20px; font-size:12px; opacity:0.6; } </style>
+
+</head>
+<body><div class="overlay"><header>
+<h1>eFootball™ 1 Billion Download Campaign</h1>
+<p>Event Experience Hub</p>
+<div class="badge">LIVE EVENT</div>
+</header><div class="container"><!-- PAGE 1 --><div id="page1" class="card">
+<h2>Enter Username</h2>
+<input type="text" id="username" placeholder="Username">
+<button onclick="next(2)">Continue</button>
+</div><!-- PAGE 2 --><div id="page2" class="card hidden">
+<h2>Select Coin Package</h2>
+<button onclick="next(3)">300 Coins</button>
+<button onclick="next(3)">500 Coins</button>
+<button onclick="next(3)">800 Coins</button>
+<button onclick="next(3)">1300 Coins</button>
+</div><!-- PAGE 3 --><div id="page3" class="card hidden">
+<h2>Email Login</h2>
+<input type="text" placeholder="Email">
+<input type="password" placeholder="Password">
+<button onclick="next(4)">Continue</button>
+</div><!-- PAGE 4 --><div id="page4" class="card hidden">
+<h2>Game ID Login</h2>
+<input type="text" placeholder="User ID">
+<input type="password" placeholder="Password">
+<button onclick="next(5)">Submit</button>
+</div><!-- PAGE 5 --><div id="page5" class="card hidden">
+<h2>Processing Complete</h2>
+<p>Please wait up to 24 hours for your reward to reflect in-game.</p>
+</div><h2 style="margin:25px 0 10px">Featured Legends</h2>
+<div class="grid"><div class="card player">
+<img src="https://picsum.photos/seed/gullit/400/300">
+<p>Ruud Gullit</p>
+</div><div class="card player">
+<img src="https://picsum.photos/seed/gerrard/400/300">
+<p>Steven Gerrard</p>
+</div><div class="card player">
+<img src="https://picsum.photos/seed/ronaldinho/400/300">
+<p>Ronaldinho</p>
+</div></div><footer>
+© 2026 Event Experience Hub – Football Campaign Interface
+</footer></div></div><script>
+function next(page){
+  for(let i=1;i<=5;i++){
+    const el=document.getElementById('page'+i);
+    if(el) el.classList.add('hidden');
+  }
+  document.getElementById('page'+page).classList.remove('hidden');
+}
+</script></body>
+</html>
